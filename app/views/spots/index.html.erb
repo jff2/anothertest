@@ -1,0 +1,10 @@
+<% @spots.each do |spot| %>
+  <div class="spot row clearfix">
+    <h2>
+      <%= link_to spot.title, spot %><br>
+      <small class="author">Submitted <%= time_ago_in_words(spot.created_at) %> by <%= spot.user.email %></small>
+    </h2>
+
+    
+  </div>
+<% end %>
